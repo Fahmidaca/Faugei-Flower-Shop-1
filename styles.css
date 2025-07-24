@@ -1,0 +1,546 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+}
+
+.navbar-right .menu li a {
+    color: #808080; /* ash color */
+}
+
+.navbar-right .menu li.home a,
+.navbar-right .menu li.cart a {
+    color: black;
+}
+
+.navbar-left .logo img {
+    filter: none;
+}
+
+.navbar-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-right .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-right .menu li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar-right .menu li.cart a {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Sparkling effect animation */
+@keyframes sparkle {
+    0% {
+        text-shadow:
+            0 0 2px #f15a29,
+            0 0 5px #f15a29,
+            0 0 10px #f15a29,
+            0 0 15px #f15a29;
+        color: #f15a29;
+    }
+    50% {
+        text-shadow:
+            0 0 5px #f15a29,
+            0 0 10px #f15a29,
+            0 0 20px #f15a29,
+            0 0 30px #f15a29;
+        color: #ff7a3c;
+    }
+    100% {
+        text-shadow:
+            0 0 2px #f15a29,
+            0 0 5px #f15a29,
+            0 0 10px #f15a29,
+            0 0 15px #f15a29;
+        color: #f15a29;
+    }
+}
+
+.sparkle-effect {
+    animation: sparkle 0.8s ease-in-out 1;
+}
+
+.cart-icon {
+    font-size: 1.2rem;
+}
+
+/* Banner Section */
+.banner {
+    padding: 2rem 1rem;
+    background-color: #f3f3f3;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.banner-content {
+    flex: 1;
+    text-align: left;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f15a29;
+}
+
+.always-text {
+    color: black;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+}
+
+.banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Plants Section */
+.plants-section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.plants-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plants-our {
+    color: #f15a29;
+}
+
+.plants-plants {
+    color: black;
+}
+
+.plants-header p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.plant-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plant-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.plant-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.plant-card .price {
+    font-weight: bold;
+    color: #f15a29;
+    margin-bottom: 1rem;
+}
+
+.plant-card .add-to-cart {
+    background-color: #f15a29;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.plant-card .add-to-cart:hover {
+    background-color: #c94a22;
+}
+
+/* Plants Lover Section */
+.plants-lover-image {
+    position: relative;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.badge-overlay {
+    position: absolute;
+    top: -70px;
+    right: -50px;
+    width: 286px;
+    height: 286px;
+    pointer-events: none;
+    font-weight: bold;
+    animation: spin 4s linear infinite;
+}
+
+.right-badge {
+    font-weight: bold;
+}
+
+.plants-lover-section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plants-lover-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.plants-lover-content {
+    flex: 1;
+    text-align: left;
+}
+
+.plants-lover-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f15a29;
+}
+
+.plants-lover-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4a4a4a;
+}
+
+/* Join Section */
+.join-section {
+    background-image: url('assets/news-letter-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.join-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.join-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.join-form input[type="email"] {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+    font-size: 1rem;
+}
+
+.join-form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #f15a29;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+    background-color: #c94a22;
+}
+
+/* Latest Deal Section */
+.latest-deal {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.latest-deal-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f15a29;
+}
+
+.black-text {
+    color: black;
+}
+
+.deal-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.deal-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.deal-group .deal-card {
+    width: 280px;
+    height: 201px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.deal-group .deal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.solo-deal {
+    flex: 1;
+    max-width: 580px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.solo-deal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.deal-text {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.75rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0 0 8px 8px;
+}
+
+.shop-now-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    cursor: pointer;
+    text-transform: none;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #f3f3f3;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-description {
+    font-size: 1rem;
+    color: #4a4a4a;
+    max-width: 250px;
+}
+
+.footer-middle {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-links-group {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links-group li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer-links-group li a:hover {
+    color: #f15a29;
+}
+
+.footer-right a {
+    margin-left: 1rem;
+}
+
+.footer-right img {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.footer-right img:hover {
+    filter: brightness(0.7);
+}
+
+/* Footer Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-middle {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-right {
+        margin-top: 1rem;
+    }
+
+    /* Navbar Mobile Responsiveness */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .navbar-right .menu {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .navbar-right .menu li a {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Add margin-bottom to paragraph in latest-deal-container for spacing */
+.latest-deal-container p {
+    margin-bottom: 3.5rem;
+}
+</edit_file>
